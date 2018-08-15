@@ -1,0 +1,70 @@
+---
+- name: "install node (part #1)"
+  command: bash -lc "curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -"
+
+- name: "install node (part #2)"
+  apt:
+    name: "{{ item }}"
+    state: present
+    force_apt_get: yes
+  with_items:
+    - nodejs
+    - build-essential
+
+- name: remove source folder
+  file:
+    path: "{{ remote_home_directory }}/frontend"
+    state: absent
+
+- name: clone git repo
+  git:
+    repo: "{{ git_repo_origin }}"
+    dest: "{{ remote_home_directory }}/frontend"
+    refspec: "refs/heads/{{ git_repo_branch }}"
+    version: "{{ git_repo_sha }}"
+
+- name: reset git repo
+  command: git reset --hard HEAD
+  args:
+    chdir: "{{ remote_home_directory }}/frontend"
+
+- name: check if swapfile exists
+  stat:
+    path: /swapfile
+  register: swapfile_stat_result
+
+- name: create swap file
+  command: fallocate -l 4G /swapfile
+  when: swapfile_stat_result.stat.exists == False
+
+- command: chmod 600 /swapfile
+  when: swapfile_stat_result.stat.exists == False
+
+- command: mkswap /swapfile
+  when: swapfile_stat_result.stat.exists == False
+
+- command: swapon /swapfile
+  when: swapfile_stat_result.stat.exists == False
+
+- name: install node modules
+  command: npm install
+  args:
+    chdir: "{{ remote_home_directory }}/frontend"
+
+- name: build production javascript/html/css bundles
+  command: npm run build:production
+  args:
+    chdir: "{{ remote_home_directory }}/frontend"
+  when: env == "production"
+
+- name: build staging javascript/html/css bundles
+  command: npm run build:staging
+  args:
+    chdir: "{{ remote_home_directory }}/frontend"
+  when: env == "staging"
+
+- name: sync backup to s3
+  command: aws s3 cp {{ remote_home_directory }}/frontend/public s3://{{ aws_public_bucket }} --force --acl public-read --recursive
+  environment:
+    AWS_ACCESS_KEY_ID: "{{ aws_public_access_key_id }}"
+    AWS_SECRET_ACCESS_KEY: "{{ aws_public_secret_access_key }}"

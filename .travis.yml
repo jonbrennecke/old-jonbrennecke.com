@@ -1,0 +1,28 @@
+sudo: true
+language: node_js
+
+services:
+  - docker
+
+env:
+  global:
+    secure: "MKl/zWCK5+g+f9nZzct/eNBGjvQWw83nwvQoje/XxZA/Bah0tbu2TE9NAsjzOOoIBU8Oz/msQpQ8w9y5jcQ2qIWpgWogp6fZLrAfGsAmOpMyyPJqeN39axYQTaB2CHJNRq34SywKQxmFGF4Xw7iZGINO8VxPbRu8eSxpbyaUoTKXvZ6zUPF6euR95pT4aFFonKM5jyKX8WvHrqyncAvM7S3K3IZdUrTGFON2ywYA/GnUDut0ebwk/vinwfoKR/S3QTGIFiVO9qEjDL+oVeqdFL8TozxAah4ffjajWnfzFjF5kyX9Cew6k7PJCu6xo+B98ourRfN9sEiGlfE20qw+Uh7Uaowcj9gM3SBO5knn28WVKsmnDQhZyBj2VHLnS6MY/+G/x3wgMtLN3ZNE1GQICTb4H1aNKivWKuVf50IEAM/npN2RlrFiSNrs14iwkg6FEC7+mzcdrdSmV3u/p+EAkcGc358UsxslbFG5yE1XuGb9n9zfOESyaGVPzR+sbfsfliXib5jdaTxi5MubvsOoV5qRMWAdsEOH/Z9CEPypsoy1iEzjo7wdfdeyVmSArmxxfcZb9siYnFTJvctGDW0kNEwU9lRhfFp5hdKArnrI0kbgtUGdR/gQD6jyMXWHry8qbYwnjGeBtzvufrDWaJqjVsAqDR2oCSLPr1mKu/5BN4A="
+
+script:
+  - npm run check
+  - npm test
+
+notifications:
+  slack:
+    rooms:
+      secure: "S3JP8OvBywfUAXs+dxtJVYUrfjeZuFNcwelU3bf4EoYVmeDbCt2Hghkfa5YvSc7yt5EeTrJUhABixDhcxI3mAYq+6AYTgkBkysd6OJYPQA9CMczGqAMEJSCnC9DAF0OP33/uqJbS7MX02+ooh4CD+44Pc0p+mHKx/KcjCNsimixP1es1ICoALZhokURUdGZplMIHrgYLZq3fZL8trRnQ9ZmYsNcqKjuaA+EWsgoL5ZDzienUteQr9alw2p4NEgDKeLW5QF0sPRV4mQCVtgSS5SuwnDQU2qDMrdB1FxAv7pznnySLcuzNQ6xgvhvdl+QLTjw1Ccxn22NxzZEObK/pIIsqaKbH/RoA5N6MQtsxXqcBkiC6ANFxixhm6Gfi7h/KdqNjb0prk2tMJbO7ah6KzuQutLxFH7QXmEx1ETYnXzo4NS9Vt19cWhoRUxgoFpovGY2IQqu+1AJGezKoGb9hfWKCpgje/1R+pxyopkbctH8rRhkyeZI12WkNtIDpd1FIMMXkizy3+DQqabl/r2r2A8jHk0M2n9bcuXG+G9B6BFwyGfN7dU8ZoJsXqQvgzkrrdegLrGl5lOmWxCfeKa/bJFJoGZs2nRsmOtFNguRyl/AI/t8CMFTRquEHiXO0VdyZAz0AG6f/i2viz46ulDWwBmUviJZJasBF0LSDpAMyt70="
+
+deploy:
+  - provider: script
+    script: bash ./scripts/deploy.sh staging
+    on:
+      branch: master
+  - provider: script
+    script: bash ./scripts/deploy.sh production
+    on:
+      branch: release

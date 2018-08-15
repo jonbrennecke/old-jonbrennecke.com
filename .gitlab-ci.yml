@@ -1,0 +1,19 @@
+# .gitlab-ci.yml
+
+image: node:7.7-wheezy
+
+production:
+  type: deploy
+  before_script:
+  - apt-get update
+  - apt-get install -y -qq gcc libc6-dev make python2.7-dev python-pip --no-install-recommends
+  - pip install awscli
+  - npm install
+  script:
+  - npm run build:production
+  - aws s3 sync public/ s3://$AWS_BUCKET --force --acl public-read
+  artifacts:
+    paths:
+    - public
+  only:
+  - master

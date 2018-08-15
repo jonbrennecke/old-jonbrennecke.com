@@ -1,0 +1,25 @@
+---
+- name: pull mysql image
+  command: docker pull mysql:5.7.8
+  when: build_mysql_container
+
+- name: stop mysql container
+  command: docker stop mathhacks-wordpress-db
+  ignore_errors: yes
+  when: build_mysql_container
+
+- name: remove mysql container
+  command: docker rm mathhacks-wordpress-db
+  ignore_errors: yes
+  when: build_mysql_container
+
+- name: run mysql container
+  command: >
+    docker run \
+      -d \
+      --name=mathhacks-wordpress-db \
+      -e MYSQL_ROOT_PASSWORD={{ mysql_root_password }} \
+      -v /mnt/sda1/var/mysql_data:/var/lib/mysql \
+      -p 3306:3306 \
+      mysql:5.7.8
+  when: build_mysql_container

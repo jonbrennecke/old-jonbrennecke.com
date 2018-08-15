@@ -1,0 +1,5 @@
+---
+remote_home_directory: /root
+git_repo_origin: https://github.com/mathhacksco/blog
+git_repo_sha: "{{ lookup('env', 'GIT_SHA') }}"
+git_repo_branch: "{{ lookup('env', 'GIT_BRANCH') }}"

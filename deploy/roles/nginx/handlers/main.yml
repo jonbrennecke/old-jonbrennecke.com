@@ -1,0 +1,21 @@
+---
+- name: stop nginx
+  service:
+    name: nginx
+    state: stopped
+  ignore_errors: yes
+  become: true
+  become_user: root
+  become_method: sudo
+  register: result
+  listen: restart nginx
+
+- name: start nginx
+  service:
+    name: nginx
+    state: started
+  when: result
+  become: true
+  become_user: root
+  become_method: sudo
+  listen: restart nginx

@@ -1,0 +1,14 @@
+---
+- hosts: all
+  gather_facts: no
+  pre_tasks:
+    - name: 'install python2'
+      raw: sudo apt-get -y install python-simplejson
+  vars:
+    build_mysql_container: false
+  vars_files:
+    - '../vars/{{ env }}.yml'
+  roles:
+    - { role: './roles/mysql' }
+    - { role: './roles/awscli' }
+    - { role: './roles/backup' }

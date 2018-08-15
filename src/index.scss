@@ -1,0 +1,25 @@
+@import "./styles/constants";
+
+html, body, main {
+  margin: 0;
+  width: 100%;
+}
+
+body {
+  background-color: $theme-light-gray;
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+main {
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.flex-1 {
+  display: flex;
+  flex: 1;
+}
