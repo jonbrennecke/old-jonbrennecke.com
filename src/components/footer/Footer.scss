@@ -22,9 +22,9 @@
   }
 
   .copyright-text {
-    font-family: $tajawalLightFontFamily;
+    font-family: $tajawal-light-font-family;
     font-weight: 100;
-    font-size: 17pt * $sketchFontMulitplier;
+    font-size: 17pt * $sketch-font-multiplier;
 
     a {
       font-weight: bold;
@@ -35,9 +35,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: $tajawalLightFontFamily;
+    font-family: $tajawal-light-font-family;
     font-weight: 100;
-    font-size: 13pt * $sketchFontMulitplier;
+    font-size: 13pt * $sketch-font-multiplier;
     padding-top: 15px;
     padding-bottom: 15px;
     line-height: 1.5em;

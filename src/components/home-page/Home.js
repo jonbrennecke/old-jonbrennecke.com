@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 
 import * as GoogleAnalytics from '../../utils/GoogleAnalytics';
 import Footer from '../footer/Footer';
+import Header from '../header/Header';
 import { SEO_PAGE_TYPE } from '../../constants';
 import Seo from '../seo/Seo';
 
@@ -32,7 +33,8 @@ export default class Home extends Component<Props, {}> {
           description="MathHacks is the modern person's destination for math writing, videos and tutorials."
           url="http://mathhacks.co"
         />
-        {/* <Hero/>
+        <Header/>
+        {/* 
         <Services/>
         <CaseStudy/>
         <BottomCallToAction/> */}

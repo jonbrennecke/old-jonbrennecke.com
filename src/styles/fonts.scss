@@ -13,11 +13,19 @@
 }
 
 @font-face {
+  font-family: 'Tajawal Medium';
+  src: url('~/fonts/Tajawal/Tajawal-Medium.ttf') format('ttf');
+  font-style: normal;
+  font-weight: 100;
+}
+
+@font-face {
   font-family: 'IM FELL French Canon SC';
   src: url('~/fonts/IMFellFrenchCanonSC/IMFeFCsc28P.ttf') format('ttf');
   font-style: normal;
 }
 
-$imFellFrenchCanonFontFamily: 'IM FELL French Canon SC', serif;
-$crimsonTextFontFamily: 'Crimson Text', serif;
-$tajawalLightFontFamily: 'Tajawal Light', sans-serif;
+$im-fell-french-canon-font-family: 'IM FELL French Canon SC', serif;
+$crimson-text-font-family: 'Crimson Text', serif;
+$tajawal-light-font-family: 'Tajawal Light', sans-serif;
+$tajawal-medium-font-family: 'Tajawal Medium', sans-serif;

@@ -1,0 +1,71 @@
+@import "../../styles/constants";
+@import "../../styles/fonts";
+
+.header {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  padding-left: 35px;
+  padding-right: 35px;
+
+  .logo-container {
+    margin: 55px auto 0 auto;
+  }
+
+  .header-bg-rect-blue-1 {
+    position: absolute;
+    top: -33vw;
+    left: -7vw;
+    right: 0;
+    width: 120vw;
+    height: 75vw;
+    background-color: $theme-medium-blue;
+    transform: rotate(-19deg);
+    transform-origin: center center;
+    border-bottom-left-radius: 35px;
+  }
+
+  .header-bg-rect-blue-2 {
+    position: relative;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(19deg, rgba(#8E99BD, 0.25) 15%, $theme-medium-blue 50%);
+  }
+
+  .header-bg-rect-gray-1 {
+    position: absolute;
+    top: -7vw;
+    left: -12vw;
+    right: 0;
+    width: 120vw;
+    height: 75vw;
+    background-color: rgba($theme-medium-blue, 0.1);
+    transform: rotate(-19deg);
+    transform-origin: center center;
+    border-bottom-left-radius: 35px;
+  }
+
+  .header-bg-rect-gray-2 {
+    position: relative;
+    width: 100%;
+    height: 16%;
+    top: 84%;
+    background: linear-gradient(90deg, rgba(#8E99BD, 0), rgba($theme-medium-blue, 0.1));
+    border-bottom-left-radius: 35px;
+  }
+
+  .hero {
+    position: relative;
+    color: $theme-light-gray;
+    font-family: $tajawal-medium-font-family;
+
+    h1 {
+      font-size: 43pt * $sketch-font-multiplier;
+    }
+
+    p {
+      font-size: 24pt * $sketch-font-multiplier;
+      
+    }
+  }
+}
