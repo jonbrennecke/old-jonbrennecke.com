@@ -56,6 +56,9 @@
 
   .hero {
     position: relative;
+    display: flex;
+    flex: 1;
+    margin-top: 100px;
     color: $theme-light-gray;
     font-family: $tajawal-medium-font-family;
 
@@ -65,7 +68,18 @@
 
     p {
       font-size: 24pt * $sketch-font-multiplier;
-      
     }
+  }
+
+  .hero-left-side {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+  }
+
+  .hero-right-side {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
   }
 }
