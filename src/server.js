@@ -1,9 +1,7 @@
 // @flow
 /* global PROJECT_ROOT */
-import register from 'ignore-styles';
 import Helmet from 'react-helmet';
 import { JSDOM } from 'jsdom';
-register(['.scss']);
 
 import React from 'react';
 import { renderToString } from 'react-dom/server';

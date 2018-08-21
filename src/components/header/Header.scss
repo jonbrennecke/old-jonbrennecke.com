@@ -81,5 +81,10 @@
     display: flex;
     flex: 1;
     justify-content: flex-end;
+
+    svg {
+      max-width: 275px;
+      max-height: 225px;
+    }
   }
 }

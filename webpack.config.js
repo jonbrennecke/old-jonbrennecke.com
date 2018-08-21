@@ -118,25 +118,6 @@ const clientRules = [
         use: 'html-loader'
     },
     {
-        test: /\.css$/,
-        use: [
-            {
-                loader: MiniCssExtractPlugin.loader,
-                options: { publicPath }
-            },
-            {
-                loader: 'css-loader',
-                options: {
-                    minimize: true
-                }
-            },
-            'postcss-loader'
-            // TODO: add autoprefixer
-            // loader: 'postcss-loader',
-            // options: { plugins: () => [ autoprefixer()] },
-        ]
-    },
-    {
         test: /\.(jpg|png|ico|eot|ttf|woff|woff2|otf|xml)$/,
         use: {
             loader: 'file-loader?name=[name].[ext]'
@@ -149,9 +130,9 @@ const clientRules = [
         }
     },
     {
-        test: /\.s?[ac]ss$/,
+        test: /\.(sa|sc|c)ss$/,
         use: [
-            {
+            isDev ? 'style-loader' : {
                 loader: MiniCssExtractPlugin.loader,
                 options: { publicPath }
             },
@@ -163,6 +144,8 @@ const clientRules = [
             },
             'postcss-loader',
             'sass-loader'
+            // TODO: add autoprefixer
+            // options: { plugins: () => [ autoprefixer()] },
         ]
     },
     {
