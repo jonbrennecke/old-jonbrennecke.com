@@ -5,6 +5,7 @@ import * as GoogleAnalytics from '../../utils/GoogleAnalytics';
 import Footer from '../footer/Footer';
 import Header from '../header/Header';
 import Services from '../services/Services';
+import CaseStudy from '../case-study/CaseStudy';
 import { SEO_PAGE_TYPE } from '../../constants';
 import Seo from '../seo/Seo';
 
@@ -35,9 +36,8 @@ export default class Home extends Component<Props, {}> {
         />
         <Header />
         <Services />
-        {/* 
-        <CaseStudy/>
-        <BottomCallToAction/> */}
+        <CaseStudy />
+        {/* <BottomCallToAction/> */}
         <Footer />
       </div>
     );

@@ -1,0 +1,74 @@
+@import "../../styles/constants";
+@import "../../styles/fonts";
+
+.case-study {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-top: 275px;
+  text-align: center;
+  padding-top: 175px;
+
+  .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .section-title {
+    h2 {
+      font-family: $tajawal-light-font-family;
+      font-size: 48pt * $sketch-font-multiplier;
+      color: $theme-medium-blue;
+      border-bottom: 9px solid $theme-medium-blue;
+      display: inline;
+    }
+  }
+
+  .case-study-title {
+    h1 {
+      font-family: $pt-serif-font-family;
+      font-size: 64pt * $sketch-font-multiplier;
+      font-weight: bold;
+      color: $theme-medium-blue;
+      margin-bottom: 0;
+    }
+
+    p {
+      font-family: $tajawal-medium-font-family;
+      font-size: 25pt * $sketch-font-multiplier;
+      color: $theme-medium-blue;
+      text-align: center;
+
+      span {
+        display: block;
+      }
+    }
+  }
+
+  .case-study-description {
+    max-width: 475px;
+
+    p {
+      font-family: $tajawal-medium-font-family;
+      font-size: 25pt * $sketch-font-multiplier;
+      color: $theme-medium-blue;
+      text-align: center;
+
+      em {
+        font-weight: bold;
+      }
+
+      span {
+        display: block;
+        margin-top: 15px;
+      }
+    }
+  }
+}

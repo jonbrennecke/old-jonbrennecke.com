@@ -25,7 +25,22 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'PT Serif';
+  src: url('~/fonts/PT_Serif/PT_Serif-Web-Regular.ttf') format('ttf');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'PT Serif';
+  src: url('~/fonts/PT_Serif/PT_Serif-Web-Bold.ttf') format('ttf');
+  font-style: normal;
+  font-weight: bold;
+}
+
 $im-fell-french-canon-font-family: 'IM FELL French Canon SC', serif;
 $crimson-text-font-family: 'Crimson Text', serif;
 $tajawal-light-font-family: 'Tajawal Light', sans-serif;
 $tajawal-medium-font-family: 'Tajawal Medium', sans-serif;
+$pt-serif-font-family: 'PT Serif', serif;

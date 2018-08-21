@@ -18,7 +18,7 @@ export default function Services({ className }: Props) {
   return (
     <section className={classnames('services', className)}>
       <ContentMaxWidth className="services-container">
-        <div>
+        <div className="section-title">
           <h1>Services</h1>
         </div>
         <ul className="services-list">

@@ -7,7 +7,7 @@ import './ContactCallToActionButton.scss';
 
 type Props = {
   className?: ?string,
-  // onClick
+  // TODO: onClick
 };
 
 export default function ContactCallToActionButton({ className }: Props) {
