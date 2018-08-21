@@ -14,6 +14,7 @@
     bottom: -1px;
     left: 0;
     width: 100%;
+    height: auto;
   }
 
   .footer-container {
@@ -24,6 +25,7 @@
     position: relative;
     color: $theme-light-gray;
     margin: 0 auto;
+    padding-bottom: 35px;
   }
 
   .copyright-container {
