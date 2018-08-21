@@ -7,13 +7,17 @@ import './ContactCallToActionButton.scss';
 
 type Props = {
   className?: ?string,
-  // TODO: onClick
 };
 
 export default function ContactCallToActionButton({ className }: Props) {
   return (
-    <button className={classnames('contact-c2a-button', className)}>
+    <a
+      className={classnames('contact-c2a-button', className)}
+      href="mailto:jpbrennecke@gmail.com"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       Contact
-    </button>
+    </a>
   );
 }

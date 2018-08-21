@@ -26,8 +26,16 @@ export default function CaseStudy({ className }: Props) {
       </div>
       <div className="case-study-description">
         <p>
-          <span><strong>Laserlike</strong> is changing the way you discover relevant, timely and engaging content for all your interests.</span>
-          <span><strong>I changed the way Laserlike did deployments.</strong> Using tools like Ansible, Jenkins and Fastlane, I developed fully automated infrastructure to deploy their complex iOS and Android apps at the push of a button.</span>
+          <span>
+            <strong>Laserlike</strong> is changing the way you discover
+            relevant, timely and engaging content for all your interests.
+          </span>
+          <span>
+            <strong>I changed the way Laserlike did deployments.</strong> Using
+            tools like Ansible, Jenkins and Fastlane, I developed fully
+            automated infrastructure to deploy their complex iOS and Android
+            apps at the push of a button.
+          </span>
         </p>
       </div>
     </section>
@@ -36,7 +44,13 @@ export default function CaseStudy({ className }: Props) {
 
 function Background({ className }: Props) {
   return (
-    <svg width="1440px" height="1135px" viewBox="0 0 1440 1135" version="1.1" className={className}>
+    <svg
+      width="1440px"
+      height="1135px"
+      viewBox="0 0 1440 1135"
+      version="1.1"
+      className={className}
+    >
       <defs>
         <linearGradient
           x1="-1.11022302e-14%"
