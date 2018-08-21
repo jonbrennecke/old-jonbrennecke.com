@@ -5,7 +5,6 @@ import { StaticRouter } from 'react-router';
 
 import Home from './components/home-page/Home';
 
-
 type Props = {
   isBrowser?: boolean,
 };

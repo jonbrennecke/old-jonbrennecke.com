@@ -21,11 +21,11 @@ const isDev = !process.env.NODE_ENV || process.env.NODE_ENV === 'development';
 const yamlPath = path.resolve('app.yml');
 const yamlConfig = yaml.load(fs.readFileSync(yamlPath, 'utf8'));
 
-const plugins = _.compact([
+const clientPlugins = _.compact([
     (isProduction || isStaging) && new CleanWebpackPlugin(['public']),
     new MiniCssExtractPlugin({
-        filename: '[name].css',
-        chunkFilename: '[id].css'
+        filename: '[name]_[contenthash].css',
+        chunkFilename: '[id]_[contenthash].css'
     }),
     new HtmlWebpackPlugin({
         filename: 'index.html',
@@ -54,6 +54,31 @@ const plugins = _.compact([
     isDev && new webpack.HotModuleReplacementPlugin()
 ]);
 
+const serverPlugins = _.compact([
+    (isProduction || isStaging) && new CleanWebpackPlugin(['public']),
+    new MiniCssExtractPlugin({
+        filename: '[name]_[contenthash].css',
+        chunkFilename: '[id]_[contenthash].css'
+    }),
+    new webpack.DefinePlugin({
+        'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),
+        'process.env.VERSION': JSON.stringify(packageData.version),
+        PROJECT_ROOT: path.join('"', __dirname, '"'),
+        CONFIG: JSON.stringify(yamlConfig),
+    }),
+    new DotenvPlugin({
+        sample: './.env.example',
+        path: _.findKey({
+            './.env.development': isDev,
+            './.env.production': isProduction,
+            './.env.staging': isStaging
+        })
+    }),
+    (isProduction || isStaging) && new UglifyJSPlugin({
+        sourceMap: true
+    }),
+]);
+
 const optimization = {
     minimize: isProduction || isStaging
 };
@@ -74,10 +99,12 @@ const resolve = {
     alias: aliases
 };
 
+const publicPath = (isProduction || isStaging) ? '/' : '/public/';
+
 const output = {
-    publicPath: (isProduction || isStaging) ? '/' : '/public/',
+    publicPath,
     path: path.resolve('public'),
-    filename: '[name].js',
+    filename: '[name].js', // TODO add contenthash
 };
 
 const clientRules = [
@@ -93,7 +120,10 @@ const clientRules = [
     {
         test: /\.css$/,
         use: [
-            MiniCssExtractPlugin.loader,
+            {
+                loader: MiniCssExtractPlugin.loader,
+                options: { publicPath }
+            },
             {
                 loader: 'css-loader',
                 options: {
@@ -121,7 +151,10 @@ const clientRules = [
     {
         test: /\.s?[ac]ss$/,
         use: [
-            MiniCssExtractPlugin.loader,
+            {
+                loader: MiniCssExtractPlugin.loader,
+                options: { publicPath }
+            },
             {
                 loader: 'css-loader',
                 options: {
@@ -170,7 +203,7 @@ const client = {
     module: {
         rules: clientRules
     },
-    plugins,
+    plugins: clientPlugins,
     optimization
 };
 
@@ -191,7 +224,7 @@ const server = {
     module: {
         rules: serverRules
     },
-    plugins,
+    plugins: serverPlugins,
     optimization
 };
 

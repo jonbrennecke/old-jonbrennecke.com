@@ -10,7 +10,6 @@ import Seo from '../seo/Seo';
 // $FlowFixMe
 import './Home.scss';
 
-
 // $FlowFixMe
 export default class Home extends Component<Props, {}> {
   props: Props;
@@ -33,12 +32,12 @@ export default class Home extends Component<Props, {}> {
           description="MathHacks is the modern person's destination for math writing, videos and tutorials."
           url="http://mathhacks.co"
         />
-        <Header/>
+        <Header />
         {/* 
         <Services/>
         <CaseStudy/>
         <BottomCallToAction/> */}
-        <Footer/>
+        <Footer />
       </div>
     );
   }

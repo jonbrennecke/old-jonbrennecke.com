@@ -13,26 +13,27 @@ type Props = {
   className?: ?string,
 };
 
-export default function Header({
-  className,
-}: Props) {
+export default function Header({ className }: Props) {
   return (
     <header className={classnames('header', className)}>
       <div className="header-bg-rect-gray-1">
-        <div className="header-bg-rect-gray-2"/>
+        <div className="header-bg-rect-gray-2" />
       </div>
       <div className="header-bg-rect-blue-1">
-        <div className="header-bg-rect-blue-2"/>
+        <div className="header-bg-rect-blue-2" />
       </div>
       <ContentMaxWidth className="logo-container">
-        <Logo/>
+        <Logo />
         <div className="hero">
           <div className="hero-left-side">
             <h1>Proven Expertise in Mobile Apps</h1>
-            <p>Hi, I’m Jon. I create apps, websites and services for startups of all shapes and sizes. Let’s talk!</p>
+            <p>
+              Hi, I’m Jon. I create apps, websites and services for startups of
+              all shapes and sizes. Let’s talk!
+            </p>
           </div>
           <div className="hero-right-side">
-            <MacArtwork/>
+            <MacArtwork />
           </div>
         </div>
       </ContentMaxWidth>

@@ -1,12 +1,14 @@
 /* @flow */
 import React from 'react';
 import Helmet from 'react-helmet';
+import path from 'path';
 
 import {
   APP_VERSION,
   APP_ENVIRONMENT,
   FAVICON_DIRECTORY,
   GOOGLE_ADSENSE_PUBLISHER_ID,
+  PUBLIC_PATH,
 } from '../../constants';
 import * as GoogleAnalytics from '../../utils/GoogleAnalytics';
 
@@ -100,7 +102,7 @@ export default function Head({ schema, title, description, url }: Props) {
       <meta property="og:url" content={url} />
       <meta property="og:type" content={schema} />
       <meta property="og:title" content={title} />
-      <meta property="og:image" content="http://mathhacks.co/og_image.png" />
+      <meta property="og:image" content={`http://mathhacks.co/${PUBLIC_PATH}/og_image.png`} />
       <meta property="og:description" content={description} />
       <meta property="og:site_name" content={title} />
       <meta property="og:locale" content="en_US" />
@@ -123,7 +125,7 @@ export default function Head({ schema, title, description, url }: Props) {
       <meta name="twitter:url" content={url} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content="/image.jpg" />
+      <meta name="twitter:image" content={`/${PUBLIC_PATH}/image.jpg`} />
 
       {/* Google Analytics tracking script */}
       <script
@@ -160,78 +162,78 @@ export default function Head({ schema, title, description, url }: Props) {
       {/* Icon links */}
       <link
         rel="shortcut icon"
-        href={`${FAVICON_DIRECTORY}/favicon.ico`}
+        href={`${path.join(FAVICON_DIRECTORY, PUBLIC_PATH)}/favicon.ico`}
         type="image/x-icon"
       />
       <link
         rel="icon"
         sizes="180x180"
-        href={`${FAVICON_DIRECTORY}/apple-touch-icon.png`}
+        href={`${path.join(FAVICON_DIRECTORY, PUBLIC_PATH)}/apple-touch-icon.png`}
       />
       <link
         rel="icon"
         sizes="16x16"
-        href={`${FAVICON_DIRECTORY}/favicon-16x16.png`}
+        href={`${path.join(FAVICON_DIRECTORY, PUBLIC_PATH)}/favicon-16x16.png`}
       />
       <link
         rel="icon"
         sizes="32x32"
-        href={`${FAVICON_DIRECTORY}/favicon-32x32.png`}
+        href={`${path.join(FAVICON_DIRECTORY, PUBLIC_PATH)}/favicon-32x32.png`}
       />
       <link
         rel="apple-touch-icon"
-        href={`${FAVICON_DIRECTORY}/apple-touch-icon.png`}
+        href={`${path.join(FAVICON_DIRECTORY, PUBLIC_PATH)}/apple-touch-icon.png`}
       />
       <link
         rel="apple-touch-icon"
         sizes="57x57"
-        href={`${FAVICON_DIRECTORY}/apple-touch-icon-57x57.png`}
+        href={`${path.join(FAVICON_DIRECTORY, PUBLIC_PATH)}/apple-touch-icon-57x57.png`}
       />
       <link
         rel="apple-touch-icon"
         sizes="60x60"
-        href={`${FAVICON_DIRECTORY}/apple-touch-icon-60x60.png`}
+        href={`${path.join(FAVICON_DIRECTORY, PUBLIC_PATH)}/apple-touch-icon-60x60.png`}
       />
       <link
         rel="apple-touch-icon"
         sizes="72x72"
-        href={`${FAVICON_DIRECTORY}/apple-touch-icon-72x72.png`}
+        href={`${path.join(FAVICON_DIRECTORY, PUBLIC_PATH)}/apple-touch-icon-72x72.png`}
       />
       <link
         rel="apple-touch-icon"
         sizes="76x76"
-        href={`${FAVICON_DIRECTORY}/apple-touch-icon-76x76.png`}
+        href={`${path.join(FAVICON_DIRECTORY, PUBLIC_PATH)}/apple-touch-icon-76x76.png`}
       />
       <link
         rel="apple-touch-icon"
         sizes="114x114"
-        href={`${FAVICON_DIRECTORY}/apple-touch-icon-114x114.png`}
+        href={`${path.join(FAVICON_DIRECTORY, PUBLIC_PATH)}/apple-touch-icon-114x114.png`}
       />
       <link
         rel="apple-touch-icon"
         sizes="120x120"
-        href={`${FAVICON_DIRECTORY}/apple-touch-icon-120x120.png`}
+        href={`${path.join(FAVICON_DIRECTORY, PUBLIC_PATH)}/apple-touch-icon-120x120.png`}
       />
       <link
         rel="apple-touch-icon"
         sizes="144x144"
-        href={`${FAVICON_DIRECTORY}/apple-touch-icon-144x144.png`}
+        href={`${path.join(FAVICON_DIRECTORY, PUBLIC_PATH)}/apple-touch-icon-144x144.png`}
       />
       <link
         rel="apple-touch-icon"
         sizes="152x152"
-        href={`${FAVICON_DIRECTORY}/apple-touch-icon-152x152.png`}
+        href={`${path.join(FAVICON_DIRECTORY, PUBLIC_PATH)}/apple-touch-icon-152x152.png`}
       />
       <link
         rel="apple-touch-icon"
         sizes="180x180"
-        href={`${FAVICON_DIRECTORY}/apple-touch-icon-180x180.png`}
+        href={`${path.join(FAVICON_DIRECTORY, PUBLIC_PATH)}/apple-touch-icon-180x180.png`}
       />
 
       {/* TODO: <!-- Safari Pinned Tab Icon -->
       <link rel="mask-icon" href="/path/to/icon.svg" color="blue"> */}
 
-      <meta name="msapplication-config" content="/browserconfig.xml" />
+      <meta name="msapplication-config" content={`${path.join(PUBLIC_PATH)}/browserconfig.xml`} />
     </Helmet>
   );
 }
