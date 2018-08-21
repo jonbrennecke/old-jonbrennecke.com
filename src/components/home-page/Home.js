@@ -6,6 +6,7 @@ import Footer from '../footer/Footer';
 import Header from '../header/Header';
 import Services from '../services/Services';
 import CaseStudy from '../case-study/CaseStudy';
+import BottomCallToAction from '../bottom-call-to-action/BottomCallToAction';
 import { SEO_PAGE_TYPE } from '../../constants';
 import Seo from '../seo/Seo';
 
@@ -37,7 +38,7 @@ export default class Home extends Component<Props, {}> {
         <Header />
         <Services />
         <CaseStudy />
-        {/* <BottomCallToAction/> */}
+        <BottomCallToAction />
         <Footer />
       </div>
     );

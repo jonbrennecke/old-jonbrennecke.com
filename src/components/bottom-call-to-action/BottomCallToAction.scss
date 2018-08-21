@@ -1,0 +1,29 @@
+@import "../../styles/constants";
+@import "../../styles/fonts";
+
+.bottom-c2a {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 40px;
+  padding-right: 40px;
+  
+  h1 {
+    font-family: $pt-serif-font-family;
+    font-size: 64pt * $sketch-font-multiplier;
+    font-weight: bold;
+    color: $theme-medium-blue;
+    margin-bottom: 0;
+  }
+
+  p {
+    font-family: $tajawal-medium-font-family;
+    font-size: 25pt * $sketch-font-multiplier;
+    color: $theme-medium-blue;
+    text-align: center;
+  }
+}
