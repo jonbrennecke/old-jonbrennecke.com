@@ -5,6 +5,7 @@ import classnames from 'classnames';
 import Logo from '../logo/Logo';
 import MacArtwork from '../artwork/mac/MacArtwork';
 import ContentMaxWidth from '../layout/content-max-width/ContentMaxWidth';
+import ContactCallToActionButton from '../contact-call-to-action-button/ContactCallToActionButton';
 
 // $FlowFixMe
 import './Header.scss';
@@ -29,8 +30,10 @@ export default function Header({ className }: Props) {
             <h1>Proven Expertise in Mobile Apps</h1>
             <p>
               Hi, I’m Jon. I create apps, websites and services for startups of
-              all shapes and sizes. Let’s talk!
+              all shapes and sizes.
+              Let’s talk!
             </p>
+            <ContactCallToActionButton/>
           </div>
           <div className="hero-right-side">
             <MacArtwork />

@@ -13,7 +13,7 @@
   }
 
   .header-bg-rect-blue-1 {
-    position: absolute;
+    position: fixed;
     top: -33vw;
     left: -7vw;
     right: 0;
@@ -33,7 +33,7 @@
   }
 
   .header-bg-rect-gray-1 {
-    position: absolute;
+    position: fixed;
     top: -7vw;
     left: -12vw;
     right: 0;
@@ -75,6 +75,10 @@
     display: flex;
     flex: 1;
     flex-direction: column;
+
+    p {
+      max-width: 300px;
+    }
   }
 
   .hero-right-side {
@@ -83,7 +87,7 @@
     justify-content: flex-end;
 
     svg {
-      max-width: 275px;
+      max-width: 300px;
       max-height: 225px;
     }
   }

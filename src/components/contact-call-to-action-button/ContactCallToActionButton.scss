@@ -1,0 +1,20 @@
+@import "../../styles/constants";
+@import "../../styles/fonts";
+
+.contact-c2a-button {
+  background-color: $theme-light-gray;
+  height: 36px;
+  width: 200px;
+  font-family: $tajawal-medium-font-family;
+  font-size: 32pt * $sketch-font-multiplier;
+  color: $theme-medium-blue;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 7px 15px rgba($theme-dark-blue, 0.23);
+  border-radius: 12px * $sketch-font-multiplier;
+  border: 0;
+  outline: 0;
+  padding: 8px;
+}
