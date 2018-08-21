@@ -16,7 +16,7 @@ export default function BottomCallToAction({ className }: Props) {
     <section className={classnames('bottom-c2a', className)}>
       <h1>Need a larger team?</h1>
       <p>Let me help you put together the right team for your next project.</p>
-      <ContactCallToActionButton />
+      <ContactCallToActionButton dark />
     </section>
   );
 }

@@ -2,15 +2,28 @@
 @import "../../styles/fonts";
 
 .footer {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
+  position: relative;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  padding-left: 35px;
+  padding-right: 35px;
+
+  .background {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+  }
 
   .footer-container {
     display: flex;
     flex: 1;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    position: relative;
+    color: $theme-light-gray;
+    margin: 0 auto;
   }
 
   .copyright-container {
@@ -25,9 +38,11 @@
     font-family: $tajawal-light-font-family;
     font-weight: 100;
     font-size: 17pt * $sketch-font-multiplier;
+    margin: 15px 0 5px 0;
 
     a {
       font-weight: bold;
+      color: $theme-light-gray;
     }
   }
 
@@ -38,13 +53,13 @@
     font-family: $tajawal-light-font-family;
     font-weight: 100;
     font-size: 13pt * $sketch-font-multiplier;
-    padding-top: 15px;
     padding-bottom: 15px;
     line-height: 1.5em;
 
     a {
       font-weight: bold;
       color: $theme-medium-gray;
+      color: $theme-light-gray;
     }
 
     em {
