@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import * as GoogleAnalytics from '../../utils/GoogleAnalytics';
 import Footer from '../footer/Footer';
 import Header from '../header/Header';
+import Services from '../services/Services';
 import { SEO_PAGE_TYPE } from '../../constants';
 import Seo from '../seo/Seo';
 
@@ -33,8 +34,8 @@ export default class Home extends Component<Props, {}> {
           url="http://mathhacks.co"
         />
         <Header />
+        <Services />
         {/* 
-        <Services/>
         <CaseStudy/>
         <BottomCallToAction/> */}
         <Footer />

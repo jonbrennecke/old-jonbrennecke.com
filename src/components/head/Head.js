@@ -102,7 +102,10 @@ export default function Head({ schema, title, description, url }: Props) {
       <meta property="og:url" content={url} />
       <meta property="og:type" content={schema} />
       <meta property="og:title" content={title} />
-      <meta property="og:image" content={`http://mathhacks.co/${PUBLIC_PATH}/og_image.png`} />
+      <meta
+        property="og:image"
+        content={`http://mathhacks.co/${PUBLIC_PATH}/og_image.png`}
+      />
       <meta property="og:description" content={description} />
       <meta property="og:site_name" content={title} />
       <meta property="og:locale" content="en_US" />
@@ -168,7 +171,10 @@ export default function Head({ schema, title, description, url }: Props) {
       <link
         rel="icon"
         sizes="180x180"
-        href={`${path.join(FAVICON_DIRECTORY, PUBLIC_PATH)}/apple-touch-icon.png`}
+        href={`${path.join(
+          FAVICON_DIRECTORY,
+          PUBLIC_PATH
+        )}/apple-touch-icon.png`}
       />
       <link
         rel="icon"
@@ -182,58 +188,91 @@ export default function Head({ schema, title, description, url }: Props) {
       />
       <link
         rel="apple-touch-icon"
-        href={`${path.join(FAVICON_DIRECTORY, PUBLIC_PATH)}/apple-touch-icon.png`}
+        href={`${path.join(
+          FAVICON_DIRECTORY,
+          PUBLIC_PATH
+        )}/apple-touch-icon.png`}
       />
       <link
         rel="apple-touch-icon"
         sizes="57x57"
-        href={`${path.join(FAVICON_DIRECTORY, PUBLIC_PATH)}/apple-touch-icon-57x57.png`}
+        href={`${path.join(
+          FAVICON_DIRECTORY,
+          PUBLIC_PATH
+        )}/apple-touch-icon-57x57.png`}
       />
       <link
         rel="apple-touch-icon"
         sizes="60x60"
-        href={`${path.join(FAVICON_DIRECTORY, PUBLIC_PATH)}/apple-touch-icon-60x60.png`}
+        href={`${path.join(
+          FAVICON_DIRECTORY,
+          PUBLIC_PATH
+        )}/apple-touch-icon-60x60.png`}
       />
       <link
         rel="apple-touch-icon"
         sizes="72x72"
-        href={`${path.join(FAVICON_DIRECTORY, PUBLIC_PATH)}/apple-touch-icon-72x72.png`}
+        href={`${path.join(
+          FAVICON_DIRECTORY,
+          PUBLIC_PATH
+        )}/apple-touch-icon-72x72.png`}
       />
       <link
         rel="apple-touch-icon"
         sizes="76x76"
-        href={`${path.join(FAVICON_DIRECTORY, PUBLIC_PATH)}/apple-touch-icon-76x76.png`}
+        href={`${path.join(
+          FAVICON_DIRECTORY,
+          PUBLIC_PATH
+        )}/apple-touch-icon-76x76.png`}
       />
       <link
         rel="apple-touch-icon"
         sizes="114x114"
-        href={`${path.join(FAVICON_DIRECTORY, PUBLIC_PATH)}/apple-touch-icon-114x114.png`}
+        href={`${path.join(
+          FAVICON_DIRECTORY,
+          PUBLIC_PATH
+        )}/apple-touch-icon-114x114.png`}
       />
       <link
         rel="apple-touch-icon"
         sizes="120x120"
-        href={`${path.join(FAVICON_DIRECTORY, PUBLIC_PATH)}/apple-touch-icon-120x120.png`}
+        href={`${path.join(
+          FAVICON_DIRECTORY,
+          PUBLIC_PATH
+        )}/apple-touch-icon-120x120.png`}
       />
       <link
         rel="apple-touch-icon"
         sizes="144x144"
-        href={`${path.join(FAVICON_DIRECTORY, PUBLIC_PATH)}/apple-touch-icon-144x144.png`}
+        href={`${path.join(
+          FAVICON_DIRECTORY,
+          PUBLIC_PATH
+        )}/apple-touch-icon-144x144.png`}
       />
       <link
         rel="apple-touch-icon"
         sizes="152x152"
-        href={`${path.join(FAVICON_DIRECTORY, PUBLIC_PATH)}/apple-touch-icon-152x152.png`}
+        href={`${path.join(
+          FAVICON_DIRECTORY,
+          PUBLIC_PATH
+        )}/apple-touch-icon-152x152.png`}
       />
       <link
         rel="apple-touch-icon"
         sizes="180x180"
-        href={`${path.join(FAVICON_DIRECTORY, PUBLIC_PATH)}/apple-touch-icon-180x180.png`}
+        href={`${path.join(
+          FAVICON_DIRECTORY,
+          PUBLIC_PATH
+        )}/apple-touch-icon-180x180.png`}
       />
 
       {/* TODO: <!-- Safari Pinned Tab Icon -->
       <link rel="mask-icon" href="/path/to/icon.svg" color="blue"> */}
 
-      <meta name="msapplication-config" content={`${path.join(PUBLIC_PATH)}/browserconfig.xml`} />
+      <meta
+        name="msapplication-config"
+        content={`${path.join(PUBLIC_PATH)}/browserconfig.xml`}
+      />
     </Helmet>
   );
 }

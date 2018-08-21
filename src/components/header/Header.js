@@ -30,10 +30,9 @@ export default function Header({ className }: Props) {
             <h1>Proven Expertise in Mobile Apps</h1>
             <p>
               Hi, I’m Jon. I create apps, websites and services for startups of
-              all shapes and sizes.
-              Let’s talk!
+              all shapes and sizes. Let’s talk!
             </p>
-            <ContactCallToActionButton/>
+            <ContactCallToActionButton />
           </div>
           <div className="hero-right-side">
             <MacArtwork />

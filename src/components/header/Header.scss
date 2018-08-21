@@ -2,6 +2,7 @@
 @import "../../styles/fonts";
 
 .header {
+  position: relative;
   width: 100%;
   display: block;
   margin: 0 auto;
@@ -13,7 +14,7 @@
   }
 
   .header-bg-rect-blue-1 {
-    position: fixed;
+    position: absolute;
     top: -33vw;
     left: -7vw;
     right: 0;
@@ -23,6 +24,7 @@
     transform: rotate(-19deg);
     transform-origin: center center;
     border-bottom-left-radius: 35px;
+    z-index: -1;
   }
 
   .header-bg-rect-blue-2 {
@@ -33,7 +35,8 @@
   }
 
   .header-bg-rect-gray-1 {
-    position: fixed;
+    z-index: -1;
+    position: absolute;
     top: -7vw;
     left: -12vw;
     right: 0;
@@ -60,13 +63,15 @@
     flex: 1;
     margin-top: 100px;
     color: $theme-light-gray;
-    font-family: $tajawal-medium-font-family;
+    
 
     h1 {
+      font-family: $tajawal-light-font-family;
       font-size: 43pt * $sketch-font-multiplier;
     }
 
     p {
+      font-family: $tajawal-medium-font-family;
       font-size: 24pt * $sketch-font-multiplier;
     }
   }

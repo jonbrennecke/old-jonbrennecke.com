@@ -1,0 +1,51 @@
+@import "../../styles/constants";
+@import "../../styles/fonts";
+
+.services {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-top: 275px;
+
+  h1 {
+    font-family: $tajawal-light-font-family;
+    font-size: 48pt * $sketch-font-multiplier;
+    color: $theme-medium-blue;
+    border-bottom: 9px solid $theme-medium-blue;
+    display: inline;
+  }
+
+  .services-list-item {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    margin: 35px 0;
+
+    .services-list-item-icon {
+      max-height: 100px;
+    }
+
+    .services-list-item-text {
+      display: flex;
+      flex: 1;
+      justify-content: center;
+      flex-direction: column;
+      max-width: 375px;
+      margin-left: 15px;
+    }
+    
+    h3 {
+      font-family: $tajawal-light-font-family;
+      color: $theme-medium-blue;
+      margin: 0;
+    }
+
+    p {
+      font-family: $tajawal-medium-font-family;
+      color: rgba($theme-medium-blue, 0.52);
+      margin: 0;
+    }
+  }
+}

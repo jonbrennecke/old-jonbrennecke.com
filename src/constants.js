@@ -7,7 +7,7 @@ export const APP_ENVIRONMENT = process.env.NODE_ENV || 'development';
 export const IS_PRODUCTION = APP_ENVIRONMENT === 'production';
 export const IS_STAGING = APP_ENVIRONMENT === 'staging';
 
-export const PUBLIC_PATH = (IS_PRODUCTION || IS_STAGING) ? '' : 'public';
+export const PUBLIC_PATH = IS_PRODUCTION || IS_STAGING ? '' : 'public';
 
 // NOTE: IOS 8601 is already moment's default format
 export const MOMENT_DEFAULT_TIMESTAMP_FORMAT: ?string = null;
