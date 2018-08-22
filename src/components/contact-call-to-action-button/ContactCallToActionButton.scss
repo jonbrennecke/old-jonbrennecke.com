@@ -3,8 +3,8 @@
 
 .contact-c2a-button {
   background-color: $theme-light-gray;
-  height: 36px;
-  width: 200px;
+  height: 46px;
+  width: 226px;
   font-family: $tajawal-medium-font-family;
   font-size: 32pt * $sketch-font-multiplier;
   color: $theme-medium-blue;
@@ -18,9 +18,16 @@
   outline: 0;
   padding-top: 5px;
   text-decoration: none;
+  transition: 0.3s transform ease-in-out, 0.3s box-shadow ease-in-out, 0.3s background-color ease-in-out;
 
   &.dark {
     background-color: $theme-medium-blue;
     color: $theme-light-gray;
+  }
+
+  &:hover, &:focus, &:active {
+    transform: translateY(-5px);
+    box-shadow: 0px 7px 35px rgba($theme-dark-blue, 0.47);
+    background-color: rgba($theme-light-gray, 0.95);
   }
 }

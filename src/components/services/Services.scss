@@ -7,17 +7,20 @@
   margin: 0 auto;
   padding-left: 40px;
   padding-right: 40px;
-  margin-top: 275px;
+  margin-top: 40vh;
   position: relative;
+  max-width: 700px; 
 
   .services-container {
     margin: 0 auto;
   }
 
   .section-title {
+    text-align: left;
+
     h1 {
       font-family: $tajawal-light-font-family;
-      font-size: 48pt * $sketch-font-multiplier;
+      font-size: $h1-default-font-size;
       color: $theme-medium-blue;
       border-bottom: 9px solid $theme-medium-blue;
       display: inline;
@@ -33,7 +36,7 @@
     list-style-type: none;
     display: flex;
     flex-direction: row;
-    margin: 35px 0;
+    margin: 45px 0;
 
     .services-list-item-icon {
       height: 100px;
@@ -45,18 +48,19 @@
       flex: 1;
       justify-content: center;
       flex-direction: column;
-      max-width: 375px;
-      margin-left: 15px;
+      margin-left: 45px;
     }
     
     h3 {
       font-family: $tajawal-light-font-family;
+      font-size: $h3-default-font-size;
       color: $theme-medium-blue;
       margin: 0;
     }
 
     p {
       font-family: $tajawal-medium-font-family;
+      font-size: $paragraph-default-font-size;
       color: rgba($theme-medium-blue, 0.52);
       margin: 0;
     }
