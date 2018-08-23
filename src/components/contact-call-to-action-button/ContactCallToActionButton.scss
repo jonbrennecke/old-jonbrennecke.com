@@ -6,17 +6,17 @@
   height: 46px;
   width: 226px;
   font-family: $tajawal-medium-font-family;
-  font-size: 32pt * $sketch-font-multiplier;
+  font-size: $button-default-font-size;
   color: $theme-medium-blue;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0px 7px 15px rgba($theme-dark-blue, 0.23);
-  border-radius: 12px * $sketch-font-multiplier;
+  border-radius: 6px;
   border: 0;
   outline: 0;
-  padding-top: 5px;
+  padding-top: 8px;
   text-decoration: none;
   transition: 0.3s transform ease-in-out, 0.3s box-shadow ease-in-out, 0.3s background-color ease-in-out;
 

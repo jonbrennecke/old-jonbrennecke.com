@@ -5,6 +5,8 @@ import classnames from 'classnames';
 // $FlowFixMe
 import './CaseStudy.scss';
 
+import LaserlikeCaseStudyImage from 'assets/images/LaserlikeCaseStudyImage.png';
+
 type Props = {
   className?: ?string,
 };
@@ -18,11 +20,17 @@ export default function CaseStudy({ className }: Props) {
       </div>
       <div className="case-study-title">
         <h1>Laserlike</h1>
-        <p>
-          <span>Continuous Integration</span>
-          <span>Deployment Infrastructure</span>
-          <span>Automation</span>
-        </p>
+        <ul className="case-study-keywords">
+          <li>
+            <h4>Continuous Integration</h4>
+          </li>
+          <li>
+            <h4>Deployment Infrastructure</h4>
+          </li>
+          <li>
+            <h4>Automation</h4>
+          </li>
+        </ul>
       </div>
       <div className="case-study-description">
         <p>
@@ -37,6 +45,9 @@ export default function CaseStudy({ className }: Props) {
             apps at the push of a button.
           </span>
         </p>
+      </div>
+      <div className="case-study-image">
+        <img src={LaserlikeCaseStudyImage} />
       </div>
     </section>
   );

@@ -11,7 +11,7 @@
   align-items: center;
   padding-left: 40px;
   padding-right: 40px;
-  margin-top: 275px;
+  margin-top: 50px;
   text-align: center;
   padding-top: 175px;
 
@@ -21,47 +21,50 @@
     left: 0;
     width: 100%;
     height: auto;
+    z-index: -1;
   }
 
-  .section-title {
-    h2 {
-      font-family: $tajawal-light-font-family;
-      font-size: 48pt * $sketch-font-multiplier;
-      color: $theme-medium-blue;
-      border-bottom: 9px solid $theme-medium-blue;
-      display: inline;
-    }
+  .section-title h2 {
+    font-family: $tajawal-light-font-family;
+    font-size: $h2-default-font-size;
+    color: $theme-medium-blue;
+    border-bottom: 9px solid $theme-medium-blue;
+    display: inline;
   }
 
-  .case-study-title {
-    h1 {
-      font-family: $pt-serif-font-family;
-      font-size: 64pt * $sketch-font-multiplier;
-      font-weight: bold;
-      color: $theme-medium-blue;
-      margin-bottom: 0;
-    }
+  .case-study-title h1 {
+    font-family: $pt-serif-font-family;
+    font-size: $h1-default-font-size;
+    font-weight: bold;
+    color: $theme-medium-blue;
+    margin: 45px 0;
+  }
 
-    p {
+  .case-study-keywords {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    h4 {
       font-family: $tajawal-medium-font-family;
-      font-size: 25pt * $sketch-font-multiplier;
+      font-size: $h4-default-font-size;
+      font-weight: normal;
       color: $theme-medium-blue;
       text-align: center;
-
-      span {
-        display: block;
-      }
+      margin: 0;
     }
   }
 
   .case-study-description {
     max-width: 475px;
+    margin-top: 45px;
 
     p {
       font-family: $tajawal-medium-font-family;
-      font-size: 25pt * $sketch-font-multiplier;
+      font-size: $paragraph-default-font-size;
       color: $theme-medium-blue;
       text-align: center;
+      margin: 0;
 
       em {
         font-weight: bold;
@@ -71,6 +74,15 @@
         display: block;
         margin-top: 15px;
       }
+    }
+  }
+
+  .case-study-image {
+    position: relative;
+    max-width: 45%;
+
+    img {
+      width: 100%;
     }
   }
 }

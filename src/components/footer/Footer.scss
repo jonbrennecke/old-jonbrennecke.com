@@ -5,27 +5,32 @@
   position: relative;
   width: 100%;
   display: block;
-  margin: 0 auto;
-  padding-left: 35px;
-  padding-right: 35px;
 
   .background {
-    position: absolute;
-    bottom: -1px;
-    left: 0;
     width: 100%;
     height: auto;
+    top: 5px;
+    position: relative;
   }
 
-  .footer-container {
+  .footer-contents-wrap {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    bottom: 0;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+  .footer-contents {
     display: flex;
     flex: 1;
     flex-direction: column;
     align-items: flex-start;
-    position: relative;
     color: $theme-light-gray;
     margin: 0 auto;
     padding-bottom: 35px;
+    position: relative;
   }
 
   .copyright-container {
@@ -39,7 +44,7 @@
   .copyright-text {
     font-family: $tajawal-light-font-family;
     font-weight: 100;
-    font-size: 17pt * $sketch-font-multiplier;
+    font-size: $paragraph-default-font-size;
     margin: 15px 0 5px 0;
 
     a {
@@ -54,7 +59,7 @@
     justify-content: center;
     font-family: $tajawal-light-font-family;
     font-weight: 100;
-    font-size: 13pt * $sketch-font-multiplier;
+    font-size: $paragraph-default-font-size;
     padding-bottom: 15px;
     line-height: 1.5em;
 

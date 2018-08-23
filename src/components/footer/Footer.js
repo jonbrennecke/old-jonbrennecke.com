@@ -19,47 +19,48 @@ export default function Footer({ className }: Props) {
   return (
     <footer className={classnames('footer', className)}>
       <Background className="background" />
-      {/* <div className="footer-container"> */}
-      <ContentMaxWidth className="footer-container">
-        <Logo />
-        <div className="copyright-container">
-          <p className="copyright-text">
-            <span>Copyright {COPYRIGHT_YEAR}, </span>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="mailto:jpbrennecke@gmail.com"
-              className="author-link"
-            >
-              Jon Brennecke
-            </a>
-            <span>, All Rights Reserved</span>
-          </p>
-        </div>
-        <div className="footer-attribution-text">
-          <span>
-            This site is open source on{' '}
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://github.com/jonbrennecke/jonbrennecke.com"
-            >
-              Github
-            </a>
-          </span>
-          <span className="seperator">|</span>
-          <span>
-            Made with <em>❤</em> by{' '}
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="mailto:jpbrennecke@gmail.com"
-            >
-              Jon Brennecke
-            </a>
-          </span>
-        </div>
-      </ContentMaxWidth>
+      <div className="footer-contents-wrap">
+        <ContentMaxWidth className="footer-contents">
+          <Logo />
+          <div className="copyright-container">
+            <p className="copyright-text">
+              <span>Copyright {COPYRIGHT_YEAR}, </span>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="mailto:jpbrennecke@gmail.com"
+                className="author-link"
+              >
+                Jon Brennecke
+              </a>
+              <span>, All Rights Reserved</span>
+            </p>
+          </div>
+          <div className="footer-attribution-text">
+            <span>
+              This site is open source on{' '}
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://github.com/jonbrennecke/jonbrennecke.com"
+              >
+                Github
+              </a>
+            </span>
+            <span className="seperator">|</span>
+            <span>
+              Made with <em>❤</em> by{' '}
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="mailto:jpbrennecke@gmail.com"
+              >
+                Jon Brennecke
+              </a>
+            </span>
+          </div>
+        </ContentMaxWidth>
+      </div>
     </footer>
   );
 }
@@ -68,8 +69,8 @@ function Background({ className }: Props) {
   return (
     <svg
       width="1440px"
-      height="583px"
-      viewBox="0 0 1440 583"
+      height="590px"
+      viewBox="0 0 1440 590"
       version="1.1"
       className={className}
     >
@@ -77,9 +78,9 @@ function Background({ className }: Props) {
         <linearGradient
           x1="-1.11022302e-14%"
           y1="50%"
-          x2="100%"
+          x2="86.5913673%"
           y2="50%"
-          id="linearGradient-1"
+          id="linearGradient-footer"
         >
           <stop stopColor="#F1F3FA" stopOpacity="0" offset="0%" />
           <stop stopColor="#DFE3F2" offset="100%" />
@@ -92,18 +93,18 @@ function Background({ className }: Props) {
         fill="none"
         fillRule="evenodd"
       >
-        <g id="Landing-Page" transform="translate(0.000000, -3849.000000)">
-          <g id="Footer" transform="translate(-237.000000, 3847.000000)">
+        <g id="Landing-Page" transform="translate(0.000000, -3842.000000)">
+          <g id="Footer" transform="translate(0.000000, 3842.000000)">
             <g id="Group-12">
-              <path
-                d="M191,0 L1896,90.1465782 L1896,869.9375 L526.490317,963.084866 C510.417346,964.178071 495.674166,954.158595 490.773777,938.811878 L191,0 Z"
+              <polygon
                 id="Rectangle-2"
-                fill="url(#linearGradient-1)"
+                fill="url(#linearGradient-footer)"
+                points="-2.13162821e-14 0.765625 1440 91.9921875 1440 590 -1.42108547e-14 590"
               />
-              <path
-                d="M0,150 L1705,240.146578 L1705,1019.9375 L335.490317,1113.08487 C319.417346,1114.17807 304.674166,1104.15859 299.773777,1088.81188 L0,150 Z"
+              <polygon
                 id="Rectangle-2"
                 fill="#556089"
+                points="2.84217094e-14 161.90625 1440 245.804688 1440 590 4.99600361e-15 590"
               />
             </g>
           </g>
