@@ -118,7 +118,13 @@ const clientRules = [
         use: 'html-loader'
     },
     {
-        test: /\.(jpg|png|ico|eot|ttf|woff|woff2|otf|xml)$/,
+        test: /\.(jpg|png|ico|xml)$/,
+        use: {
+            loader: 'file-loader?name=[name].[ext]'
+        }
+    },
+    {
+        test: /\.(eot|ttf|woff|woff2|otf)$/,
         use: {
             loader: 'file-loader?name=[name].[ext]'
         }
@@ -139,11 +145,23 @@ const clientRules = [
             {
                 loader: 'css-loader',
                 options: {
-                    minimize: true
+                    minimize: true,
+                    url: true
                 }
             },
-            'postcss-loader',
-            'sass-loader'
+            'resolve-url-loader',
+            {
+                loader: 'postcss-loader',
+                options: {
+                    sourceMap: true
+                }
+            },
+            {
+                loader: 'sass-loader',
+                options: {
+                    sourceMap: true
+                }
+            }
             // TODO: add autoprefixer
             // options: { plugins: () => [ autoprefixer()] },
         ]
