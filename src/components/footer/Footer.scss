@@ -1,5 +1,6 @@
 @import "../../styles/constants";
 @import "../../styles/fonts";
+@import "../../styles/media";
 
 .footer {
   position: relative;
@@ -11,6 +12,11 @@
     height: auto;
     top: 5px;
     position: relative;
+
+    @include iphone-x-portrait {
+      height: 500px;
+      width: auto;
+    }
   }
 
   .footer-contents-wrap {
@@ -76,6 +82,15 @@
     .seperator {
       margin-right: 5px;
       margin-left: 5px;
+    }
+
+    @include iphone-x-portrait {
+      flex-direction: column;
+      align-items: flex-start;
+
+      .seperator {
+        display: none;
+      }
     }
   }
 }

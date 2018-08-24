@@ -1,5 +1,6 @@
 @import "../../styles/constants";
 @import "../../styles/fonts";
+@import "../../styles/media";
 
 .case-study {
   position: relative;
@@ -22,6 +23,10 @@
     width: 100%;
     height: auto;
     z-index: -1;
+
+    @include iphone-x-portrait {
+      width: auto;
+    }
   }
 
   .section-title h2 {
@@ -57,7 +62,7 @@
 
   .case-study-description {
     max-width: 475px;
-    margin-top: 45px;
+    margin: 45px 0;
 
     p {
       font-family: $tajawal-medium-font-family;
@@ -83,6 +88,10 @@
 
     img {
       width: 100%;
+    }
+
+    @include iphone-x-portrait {
+      max-width: 100%;
     }
   }
 }

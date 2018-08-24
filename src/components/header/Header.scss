@@ -1,5 +1,6 @@
 @import "../../styles/constants";
 @import "../../styles/fonts";
+@import "../../styles/media";
 
 .header {
   position: relative;
@@ -16,10 +17,25 @@
 
   .background {
     position: absolute;
-    top: -100px;
+    top: 0;
     left: 0;
     width: 100%;
     height: auto;
+
+    @include ipad-portrait {
+      left: -75px;
+      width: 200%;
+    }
+
+    @include ipad-landscape {
+      left: -75px;
+      width: 150%;
+    }
+
+    @include iphone-x-portrait {
+      left: -65px;
+      width: auto;
+    }
   }
 
   .hero {
@@ -38,6 +54,18 @@
     p {
       font-family: $tajawal-medium-font-family;
       font-size: $paragraph-default-font-size;
+    }
+
+    @include iphone-x-portrait {
+      margin-top: 50px;
+
+      h1 {
+        font-size: $h1-mobile-font-size;
+      }
+    }
+
+    p {
+      font-size: $paragraph-mobile-font-size;
     }
   }
 

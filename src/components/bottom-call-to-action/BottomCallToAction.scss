@@ -1,5 +1,6 @@
 @import "../../styles/constants";
 @import "../../styles/fonts";
+@import "../../styles/media";
 
 .bottom-c2a {
   position: relative;
@@ -9,6 +10,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   padding: 175px 40px 175px;
   
   h1 {
@@ -24,5 +26,11 @@
     font-size: $paragraph-default-font-size;
     color: $theme-medium-blue;
     text-align: center;
+  }
+
+  @include iphone-x-portrait {
+    h1 {
+      font-size: $h1-mobile-font-size;
+    }
   }
 }
