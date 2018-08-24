@@ -27,6 +27,11 @@
     @include iphone-x-portrait {
       width: auto;
     }
+
+    @include ipad-landscape {
+      left: -75px;
+      width: 150%;
+    }
   }
 
   .section-title h2 {
@@ -84,7 +89,7 @@
 
   .case-study-image {
     position: relative;
-    max-width: 45%;
+    max-width: 70%;
 
     img {
       width: 100%;
