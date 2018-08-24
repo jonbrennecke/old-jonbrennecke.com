@@ -39,10 +39,6 @@ export const SEO_PAGE_TYPE = {
 };
 
 // $FlowFixMe
-export const GOOGLE_ADSENSE_PUBLISHER_ID: string =
-  process.env.GOOGLE_ADSENSE_PUBLISHER_ID;
-
-// $FlowFixMe
 export const GOOGLE_ANALYTICS_TRACKING_ID: string =
   process.env.GOOGLE_ANALYTICS_TRACKING_ID;
 

@@ -7,7 +7,6 @@ import {
   APP_VERSION,
   APP_ENVIRONMENT,
   FAVICON_DIRECTORY,
-  GOOGLE_ADSENSE_PUBLISHER_ID,
   PUBLIC_PATH,
 } from '../../constants';
 import * as GoogleAnalytics from '../../utils/GoogleAnalytics';
@@ -71,7 +70,7 @@ export default function Head({ schema, title, description, url }: Props) {
 
       {/* TODO: change canonical link if on an article page */}
       <link rel="canonical" href={url} />
-      <title>MathHacks</title>
+      <title>{title}</title>
 
       {/* TODO: add header color for chrome: <meta name="theme-color" content="#4285f4"> */}
 
@@ -80,12 +79,12 @@ export default function Head({ schema, title, description, url }: Props) {
       <meta name="googlebot" content="index,follow" />
 
       {/* Search engine verification tags */}
-      <meta
+      {/* <meta
         name="google-site-verification"
         content="1ELExjSDfmvpRQ0nT8BHlmeMMJKiFFqj-UzYNu4qNpM"
-      />
-      <meta name="p:domain_verify" content="ad26da832d110e25d1b7750e14bd1719" />
-      <meta name="msvalidate.01" content="ABF5AE6D72B987F7E57C176A8520C683" />
+      /> */}
+      {/* <meta name="p:domain_verify" content="ad26da832d110e25d1b7750e14bd1719" /> */}
+      {/* <meta name="msvalidate.01" content="ABF5AE6D72B987F7E57C176A8520C683" /> */}
       {/* TODO: <meta name="alexaVerifyID" content="verification_token"><!-- Alexa Console --> */}
 
       <meta name="rating" content="General" />
@@ -98,7 +97,7 @@ export default function Head({ schema, title, description, url }: Props) {
       <link rel="license" href="http://mathhacks.co/copyright"> */}
 
       {/* Facebook Open Graph - http://ogp.me/ */}
-      <meta property="fb:app_id" content="186638215372469" />
+      {/* TODO: <meta property="fb:app_id" content="186638215372469" /> */}
       <meta property="og:url" content={url} />
       <meta property="og:type" content={schema} />
       <meta property="og:title" content={title} />
@@ -145,20 +144,6 @@ export default function Head({ schema, title, description, url }: Props) {
         gtag('config', '${
           GoogleAnalytics.GOOGLE_ANALYTICS_PARAMS.TRACKING_ID
         }');
-      `}
-      </script>
-
-      {/* <AdSense/> */}
-      <script
-        async
-        src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-      />
-      <script>
-        {`
-        (adsbygoogle = window.adsbygoogle || []).push({
-          google_ad_client: "${GOOGLE_ADSENSE_PUBLISHER_ID}",
-          enable_page_level_ads: true
-        });
       `}
       </script>
 

@@ -31,9 +31,9 @@ export default class Home extends Component<Props, {}> {
       <div className="app-container homepage">
         <Seo
           pageType={SEO_PAGE_TYPE.WEBPAGE}
-          title="MathHacks"
-          description="MathHacks is the modern person's destination for math writing, videos and tutorials."
-          url="http://mathhacks.co"
+          title="Jon Brennecke"
+          description="Jon Brennecke"
+          url="http://jonbrennecke.com"
         />
         <Header />
         <Services />
