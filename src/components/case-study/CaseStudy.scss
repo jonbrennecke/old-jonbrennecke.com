@@ -28,6 +28,10 @@
       width: auto;
     }
 
+    @include iphone-portrait {
+      width: auto;
+    }
+
     @include ipad-landscape {
       left: -75px;
       width: 150%;
@@ -96,6 +100,10 @@
     }
 
     @include iphone-x-portrait {
+      max-width: 100%;
+    }
+
+    @include iphone-portrait {
       max-width: 100%;
     }
   }

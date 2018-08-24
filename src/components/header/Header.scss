@@ -32,6 +32,11 @@
       width: 150%;
     }
 
+    @include iphone-portrait {
+      left: -65px;
+      width: auto;
+    }
+
     @include iphone-x-portrait {
       left: -65px;
       width: auto;
@@ -57,6 +62,14 @@
     }
 
     @include iphone-x-portrait {
+      margin-top: 50px;
+
+      h1 {
+        font-size: $h1-mobile-font-size;
+      }
+    }
+
+    @include iphone-portrait {
       margin-top: 50px;
 
       h1 {

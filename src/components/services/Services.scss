@@ -29,6 +29,10 @@
       @include iphone-x-portrait {
         font-size: $h1-mobile-font-size;
       }
+
+      @include iphone-portrait {
+        font-size: $h1-mobile-font-size;
+      }
     }
   }
 
@@ -71,6 +75,15 @@
     }
 
     @include iphone-x-portrait {
+      flex-direction: column;
+
+      & .services-list-item-text {
+        margin-left: 0 !important;
+        margin-top: 15px;
+      }
+    }
+
+    @include iphone-portrait {
       flex-direction: column;
 
       & .services-list-item-text {
