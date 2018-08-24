@@ -1,46 +1,31 @@
 @font-face {
-  font-family: 'Crimson Text';
-  src: url('~/fonts/CrimsonText/CrimsonText-Regular.ttf') format('ttf');
-  font-style: normal;
-  font-weight: 100;
-}
-
-@font-face {
   font-family: 'Tajawal Light';
-  src: url('~/fonts/Tajawal/Tajawal-Light.ttf') format('ttf');
+  src: url('/assets/fonts/Tajawal/Tajawal-Light.ttf') format('ttf');
   font-style: normal;
   font-weight: 100;
 }
 
 @font-face {
   font-family: 'Tajawal Medium';
-  src: url('~/fonts/Tajawal/Tajawal-Medium.ttf') format('ttf');
+  src: url('/assets/fonts/Tajawal/Tajawal-Medium.ttf') format('ttf');
   font-style: normal;
   font-weight: 100;
 }
 
 @font-face {
-  font-family: 'IM FELL French Canon SC';
-  src: url('~/fonts/IMFellFrenchCanonSC/IMFeFCsc28P.ttf') format('ttf');
-  font-style: normal;
-}
-
-@font-face {
   font-family: 'PT Serif';
-  src: url('~/fonts/PT_Serif/PT_Serif-Web-Regular.ttf') format('ttf');
+  src: url('/assets/fonts/PT_Serif/PT_Serif-Web-Regular.ttf') format('ttf');
   font-style: normal;
   font-weight: normal;
 }
 
 @font-face {
   font-family: 'PT Serif';
-  src: url('~/fonts/PT_Serif/PT_Serif-Web-Bold.ttf') format('ttf');
+  src: url('/assets/fonts/PT_Serif/PT_Serif-Web-Bold.ttf') format('ttf');
   font-style: normal;
   font-weight: bold;
 }
 
-$im-fell-french-canon-font-family: 'IM FELL French Canon SC', serif;
-$crimson-text-font-family: 'Crimson Text', serif;
 $tajawal-light-font-family: 'Tajawal Light', sans-serif;
 $tajawal-medium-font-family: 'Tajawal Medium', sans-serif;
 $pt-serif-font-family: 'PT Serif', serif;

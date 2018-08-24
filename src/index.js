@@ -6,6 +6,7 @@ import Promise from 'bluebird';
 import * as Debug from './utils/DebugUtil';
 
 import Routes from './Routes';
+import './fonts';
 
 // $FlowFixMe
 import './index.scss';

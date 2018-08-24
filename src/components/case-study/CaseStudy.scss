@@ -36,6 +36,10 @@
       left: -75px;
       width: 150%;
     }
+
+    @include ipad-portrait {
+      width: auto;
+    }
   }
 
   .section-title h2 {
