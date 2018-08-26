@@ -110,5 +110,10 @@
     @include iphone-portrait {
       max-width: 100%;
     }
+
+
+  @include desktop-extra-wide-landscape {
+    max-width: 1000px;
+  }
   }
 }

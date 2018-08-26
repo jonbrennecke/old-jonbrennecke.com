@@ -53,3 +53,11 @@
       @content;
     }
 }
+
+@mixin desktop-extra-wide-landscape {
+  @media only screen
+    and (min-width: 1900px)
+    and (orientation: landscape){
+      @content;
+  }
+}

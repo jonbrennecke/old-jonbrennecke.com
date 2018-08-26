@@ -80,6 +80,10 @@
     p {
       font-size: $paragraph-mobile-font-size;
     }
+
+    @include desktop-extra-wide-landscape {
+      margin-top: 300px;
+    }
   }
 
   .hero-left-side {

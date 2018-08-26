@@ -12,6 +12,10 @@
   position: relative;
   max-width: 700px; 
 
+  @include desktop-extra-wide-landscape {
+    margin-top: 800px;
+  }
+
   .services-container {
     margin: 0 auto;
   }
